@@ -46,7 +46,7 @@ public class DatabaseMgr {
             synchronized (DatabaseMgr.class) {
                 sHelper = new DatabaseHelper(context.getApplicationContext());
                 sDatabase = sHelper.getWritableDatabase();
-                // 获取之后引用技术为1
+                // 获取之后引用计数为1
                 sDbRef.incrementAndGet();
             }
         }
